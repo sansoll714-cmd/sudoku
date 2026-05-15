@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>그린 스도쿠</title>
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="info-panel">
+        <div class="brand-block">
+          <p class="eyebrow">Node.js Web Sudoku</p>
+          <h1>그린 스도쿠</h1>
+        </div>
+
+        <section class="status-card">
+          <h2>게임 정보</h2>
+          <div class="status-list">
+            <div class="difficulty-row">
+              <button id="difficultyTrigger" class="status-item difficulty-item" type="button" aria-haspopup="listbox" aria-expanded="false">
+                <span>난이도</span>
+                <strong id="difficultyValue">보통</strong>
+              </button>
+              <div id="difficultyMenu" class="difficulty-menu" role="listbox" aria-label="난이도 선택" hidden>
+                <button class="difficulty-option" type="button" data-difficulty="쉬움" role="option" aria-selected="false">쉬움</button>
+                <button class="difficulty-option is-selected" type="button" data-difficulty="보통" role="option" aria-selected="true">보통</button>
+                <button class="difficulty-option" type="button" data-difficulty="어려움" role="option" aria-selected="false">어려움</button>
+              </div>
+            </div>
+            <div class="status-item">
+              <span>타이머</span>
+              <strong id="timerLabel">00:00</strong>
+            </div>
+            <div class="status-item">
+              <span>힌트</span>
+              <strong id="hintCountLabel">0 / 5</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="action-card">
+          <h2>조작</h2>
+          <div class="button-stack">
+            <button id="newGameBtn" class="primary-btn" type="button">새 게임</button>
+            <button id="hintBtn" class="secondary-btn" type="button">힌트</button>
+            <button id="resetBtn" class="secondary-btn" type="button">초기화</button>
+          </div>
+        </section>
+
+        <section class="guide-card">
+          <h2>플레이 가이드</h2>
+          <ul>
+            <li>빈 칸을 선택한 뒤 키보드 숫자를 입력합니다.</li>
+            <li>오답은 붉은색으로 표시되며 실수 횟수가 증가합니다.</li>
+            <li>같은 숫자는 은은하게 강조되어 흐름을 놓치지 않게 돕습니다.</li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="game-panel">
+        <section class="board-card">
+          <div class="panel-heading">
+            <p id="messageLabel" class="message-pill">칸을 선택하고 숫자를 입력해보세요.</p>
+          </div>
+
+          <div class="board-wrap">
+            <div id="board" class="board" aria-label="스도쿠 보드"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

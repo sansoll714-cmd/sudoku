@@ -1,0 +1,9 @@
+{
+  "name": "green-sudoku",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node.js web Sudoku game with a green split layout",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
